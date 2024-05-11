@@ -1,0 +1,98 @@
+header {
+    background-color: var(--clr-secondary);
+}
+
+.header__inner {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    padding-bottom: 1rem;
+}
+
+.header__heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__title {
+    text-decoration: underline;
+    text-decoration-color: var(--clr-primary);
+    text-decoration-skip-ink: all;
+    text-decoration-thickness: 0.3rem;
+    text-underline-offset: 0.5rem;
+}
+
+.http-status-dogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1rem;
+    justify-items: center;
+    margin-top: 1.5rem;
+
+    flex: 1;
+}
+
+.http-status-dogs-fetch-button-container {
+    flex: 1;
+    display: flex;
+    place-items: center;
+}
+
+.http-status-dogs-fetch-button {
+    width: 15rem;
+    height: 6rem;
+    font-size: large;
+    font-weight: 700;
+
+    background-color: var(--clr-primary);
+    color: var(--clr-background);
+    border: 2px solid var(--clr-text);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.http-status-dogs-grid__fetch-button:hover {
+    transform: brightness(1.1) translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.http-status-dogs-fetch-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.http-status-dogs-fetch-error {
+    color: red;
+    font-size: 2.5rem;
+}
+
+@media (max-width: 1680px) {
+    .http-status-dogs-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 1280px) {
+    .http-status-dogs-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 1024px) {
+    .header__subtitle {
+        margin-top: 0.6rem;
+    }
+
+    .http-status-dogs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 1rem;
+        justify-items: center;
+        margin-top: 1.5rem;
+
+        flex: 1;
+    }
+}
